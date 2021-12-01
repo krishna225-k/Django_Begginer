@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Form</title>
+    {% include 'curd/bootstraplines.html' %}
+</head>
+<body>
+<style>
+    a{
+    margin-top : 5px;
+    border: 4px;
+    }
+    body {
+    background-color: lightcyan;
+    }
+    form{
+<!--    margin: 50px;-->
+<!--    padding: 20px;-->
+
+    }
+
+</style>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-col 3 col-md-6">
+
+            <form method="POST">
+                <h3 class="text-center">Please Enter product details</h3>
+                {{ form }} <br>
+                {% csrf_token %}
+                <center>
+                    <input type="submit" value="Create" class="btn btn-success">
+                    <input type="reset" value="Clear" class="btn btn-danger">
+                    <a href="/#/">Goto Home page</a>
+                </center>
+            </form>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

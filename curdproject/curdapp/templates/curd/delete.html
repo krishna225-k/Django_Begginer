@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Form</title>
+    {% include 'curd/bootstraplines.html' %}
+</head>
+<body>
+<style>
+
+    body{
+    background-color: lightcyan;
+    }
+    a{
+
+
+
+    border: 2px purple solid;
+    border-radius: 7px;
+    background-color: blue;
+    color:white;
+    }
+    form{
+    border : 2px grey solid;
+    border-radius: 20px;
+    padding : 20px;
+
+    }
+    .btn{
+    margin-top: 10px;
+    }
+
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6"> <br>
+            <form method="post">
+                <h2 class="text-center"> Please Delete Here..</h2>
+                {% csrf_token %}
+                {{ form }}
+                <center>
+                    <input type="submit" value="Delete" class="btn btn-success btn1">
+                    <input type="reset" value="Clear" class="btn btn-danger btn1"> <br><br>
+                    <a href="/#/">Go to Home Page</a>
+                </center>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

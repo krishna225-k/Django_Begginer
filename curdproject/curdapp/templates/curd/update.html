@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Form</title>
+    {% include 'curd/bootstraplines.html' %}
+</head>
+<body>
+<style>
+    .btn1 {
+    margin-top: 10px;
+    }
+    body {
+    background-color: lightcyan;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+
+            <form method="POST">
+                <h2 class="text-center">Please Update Here..</h2>
+                {% csrf_token %}
+                {{ form }}
+                <center>
+                <input type="submit" value="Update" class="btn btn-success btn1">
+                <input type="reset" value="Clear" class="btn btn-danger btn1"><br>
+                <a href="/#/">Go to Homepage</a>
+                </center>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

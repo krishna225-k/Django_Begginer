@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retrieve Form</title>
+    {% include 'curd/bootstraplines.html' %}
+</head>
+<style>
+    a{
+    text-align:center;
+    }
+    body{
+    background-color: grey ;
+    }
+    table{
+    margin-right: 30px;
+    background-color: yellow accent;
+    border: 10px;
+    padding: 20px;
+
+
+    }
+</style>
+<body>
+    {% if products %}
+<h2 class="text-center"> Product Details</h2>
+<table class="table table-bordered text-center table-hover bg-color bg-success">
+    <thead class="text-center table ">
+    <th> Product ID</th>
+    <th>Product Name</th>
+    <th>Class</th>
+    <th>Price</th>
+    <th>Customer Name</th>
+    <th>Mobile Number</th>
+    <th>Email Id</th>
+    </thead>
+
+    <tbody class="bg-dark text-white">
+    {% for i in products %}
+    <tr>
+        <td>{{ i.product_id }}</td>
+        <td>{{ i.product_name }}</td>
+        <td>{{ i.product_class }}</td>
+        <td>{{ i.product_price }}</td>
+        <td>{{ i.customer_name }}</td>
+        <td>{{ i.mobile }}</td>
+        <td>{{ i.email }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+
+</table>
+    <center>
+<a href="/#/" class="text-center btn btn-success ">Goto Home page</a>
+        </center>
+{% else %}
+<h2> Data Not Available</h2>
+{% endif %}
+</body>
+</html>

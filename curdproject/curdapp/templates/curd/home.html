@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CURD</title>
+
+    {% include 'curd/bootstraplines.html' %}
+
+
+</head>
+
+<body>
+<style>
+
+    .jumbotron{
+    margin-top : 20px;
+    margin-left : 120px;
+    margin-right:130px;
+    background-color: darkcyan;
+    border-radius : 30px;
+    box-shadow: 0 0 10px black, 0 0 20px read;
+    }
+
+    a{
+    margin-left : 110px,
+    font-size : 50 px;
+    boarder: 2px green solid;
+    padding: 30px 40px;
+    border-radius : 20px;
+    background-color: lime;
+    }
+
+    body{
+    background-color: lightcyan;
+    }
+
+    h1{
+    font-size: 100px;
+    text-shadow: 0 0 10px red;
+    }
+
+</style>
+<h1 class="text-center">Curd operations</h1>
+<div class="jumbotron">
+        <center>
+    <a class="text-white" href="/create">Create</a>
+    <a class="text-white" href="/retrieve/">Retrieve</a>
+    <a class="text-white" href="/update/">Update</a>
+    <a class="text-white" href="/delete/">Delete</a>
+        </center>
+</div>
+</body>
+</html>
